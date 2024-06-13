@@ -1,0 +1,245 @@
+<p>test2 works!</p>
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/principal">SISVITA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Offcanvas Content -->
+<div class="offcanvas offcanvas-end text-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas-header bg-dark">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body bg-dark">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/principal">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cuenta
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Ver Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/login-persona">Cerrar Sesion</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="content-wrapper">
+    <form [formGroup]="respuestaForm" (ngSubmit)="registrarRespuestas()" class="form-container">
+        <div class="question">
+            <p class="question-text">1.¿Con qué frecuencia te sientes preocupado/a por cosas cotidianas como tus estudios, tu trabajo o tus relaciones?</p>
+            <div class="options">
+                <label for="respuesta_1"><input type="radio" id="respuesta_1_a" formControlName="respuesta_1" value="Nunca"> Nunca</label>
+                <label for="respuesta_1"><input type="radio" id="respuesta_1_b" formControlName="respuesta_1" value="A veces"> A veces</label>
+                <label for="respuesta_1"><input type="radio" id="respuesta_1_c" formControlName="respuesta_1" value="A menudo"> A menudo</label>
+                <label for="respuesta_1"><input type="radio" id="respuesta_1_d" formControlName="respuesta_1" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">2.¿Te sientes nervioso/a o intranquilo/a la mayor parte del tiempo?</p>
+            <div class="options">
+                <label for="respuesta_2"><input type="radio" id="respuesta_2_a" formControlName="respuesta_2" value="Nunca"> Nunca</label>
+                <label for="respuesta_2"><input type="radio" id="respuesta_2_b" formControlName="respuesta_2" value="A veces"> A veces</label>
+                <label for="respuesta_2"><input type="radio" id="respuesta_2_c" formControlName="respuesta_2" value="A menudo"> A menudo</label>
+                <label for="respuesta_2"><input type="radio" id="respuesta_2_d" formControlName="respuesta_2" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">3.¿Te cuesta concentrarte en tus tareas académicas debido a la ansiedad?</p>
+            <div class="options">
+                <label for="respuesta_3"><input type="radio" id="respuesta_3_a" formControlName="respuesta_3" value="Nunca"> Nunca</label>
+                <label for="respuesta_3"><input type="radio" id="respuesta_3_b" formControlName="respuesta_3" value="A veces"> A veces</label>
+                <label for="respuesta_3"><input type="radio" id="respuesta_3_c" formControlName="respuesta_3" value="A menudo"> A menudo</label>
+                <label for="respuesta_3"><input type="radio" id="respuesta_3_d" formControlName="respuesta_3" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">4.¿Te preocupas excesivamente por tu desempeño académico y las calificaciones?</p>
+            <div class="options">
+                <label for="respuesta_4"><input type="radio" id="respuesta_4_a" formControlName="respuesta_4" value="Nunca"> Nunca</label>
+                <label for="respuesta_4"><input type="radio" id="respuesta_4_b" formControlName="respuesta_4" value="A veces"> A veces</label>
+                <label for="respuesta_4"><input type="radio" id="respuesta_4_c" formControlName="respuesta_4" value="A menudo"> A menudo</label>
+                <label for="respuesta_4"><input type="radio" id="respuesta_4_d" formControlName="respuesta_4" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">5.¿Te sientes fácilmente fatigado/a o agotado/a, incluso después de una buena noche de sueño?</p>
+            <div class="options">
+                <label for="respuesta_5"><input type="radio" id="respuesta_5_a" formControlName="respuesta_5" value="Nunca"> Nunca</label>
+                <label for="respuesta_5"><input type="radio" id="respuesta_5_b" formControlName="respuesta_5" value="A veces"> A veces</label>
+                <label for="respuesta_5"><input type="radio" id="respuesta_5_c" formControlName="respuesta_5" value="A menudo"> A menudo</label>
+                <label for="respuesta_5"><input type="radio" id="respuesta_5_d" formControlName="respuesta_5" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">6.¿Te cuesta relajarte o disfrutar de actividades recreativas debido a la ansiedad?</p>
+            <div class="options">
+                <label for="respuesta_6"><input type="radio" id="respuesta_6_a" formControlName="respuesta_6" value="Nunca"> Nunca</label>
+                <label for="respuesta_6"><input type="radio" id="respuesta_6_b" formControlName="respuesta_6" value="A veces"> A veces</label>
+                <label for="respuesta_6"><input type="radio" id="respuesta_6_c" formControlName="respuesta_6" value="A menudo"> A menudo</label>
+                <label for="respuesta_6"><input type="radio" id="respuesta_6_d" formControlName="respuesta_6" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">7.¿Tienes problemas para conciliar el sueño o mantenerte dormido/a debido a preocupaciones?</p>
+            <div class="options">
+                <label for="respuesta_7"><input type="radio" id="respuesta_7_a" formControlName="respuesta_7" value="Nunca"> Nunca</label>
+                <label for="respuesta_7"><input type="radio" id="respuesta_7_b" formControlName="respuesta_7" value="A veces"> A veces</label>
+                <label for="respuesta_7"><input type="radio" id="respuesta_7_c" formControlName="respuesta_7" value="A menudo"> A menudo</label>
+                <label for="respuesta_7"><input type="radio" id="respuesta_7_d" formControlName="respuesta_7" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">8.¿Sientes dolores musculares o tensiones, especialmente en el cuello, los hombros o la espalda?</p>
+            <div class="options">
+                <label for="respuesta_8"><input type="radio" id="respuesta_8_a" formControlName="respuesta_8" value="Nunca"> Nunca</label>
+                <label for="respuesta_8"><input type="radio" id="respuesta_8_b" formControlName="respuesta_8" value="A veces"> A veces</label>
+                <label for="respuesta_8"><input type="radio" id="respuesta_8_c" formControlName="respuesta_8" value="A menudo"> A menudo</label>
+                <label for="respuesta_8"><input type="radio" id="respuesta_8_d" formControlName="respuesta_8" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">9.¿Te preocupas por situaciones sociales, como hablar en público o interactuar con compañeros de clase?</p>
+            <div class="options">
+                <label for="respuesta_9"><input type="radio" id="respuesta_9_a" formControlName="respuesta_9" value="Nunca"> Nunca</label>
+                <label for="respuesta_9"><input type="radio" id="respuesta_9_b" formControlName="respuesta_9" value="A veces"> A veces</label>
+                <label for="respuesta_9"><input type="radio" id="respuesta_9_c" formControlName="respuesta_9" value="A menudo"> A menudo</label>
+                <label for="respuesta_9"><input type="radio" id="respuesta_9_d" formControlName="respuesta_9" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">10.¿Te sientes irritable o de mal humor con frecuencia?</p>
+            <div class="options">
+                <label for="respuesta_10"><input type="radio" id="respuesta_10_a" formControlName="respuesta_10" value="Nunca"> Nunca</label>
+                <label for="respuesta_10"><input type="radio" id="respuesta_10_b" formControlName="respuesta_10" value="A veces"> A veces</label>
+                <label for="respuesta_10"><input type="radio" id="respuesta_10_c" formControlName="respuesta_10" value="A menudo"> A menudo</label>
+                <label for="respuesta_10"><input type="radio" id="respuesta_10_d" formControlName="respuesta_10" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">11.¿Te resulta difícil controlar tus preocupaciones, incluso cuando sabes que no son racionales?</p>
+            <div class="options">
+                <label for="respuesta_11"><input type="radio" id="respuesta_11_a" formControlName="respuesta_11" value="Nunca"> Nunca</label>
+                <label for="respuesta_11"><input type="radio" id="respuesta_11_b" formControlName="respuesta_11" value="A veces"> A veces</label>
+                <label for="respuesta_11"><input type="radio" id="respuesta_11_c" formControlName="respuesta_11" value="A menudo"> A menudo</label>
+                <label for="respuesta_11"><input type="radio" id="respuesta_11_d" formControlName="respuesta_11" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">12.¿Evitas ciertas actividades o situaciones porque te causan ansiedad?</p>
+            <div class="options">
+                <label for="respuesta_12"><input type="radio" id="respuesta_12_a" formControlName="respuesta_12" value="Nunca"> Nunca</label>
+                <label for="respuesta_12"><input type="radio" id="respuesta_12_b" formControlName="respuesta_12" value="A veces"> A veces</label>
+                <label for="respuesta_12"><input type="radio" id="respuesta_12_c" formControlName="respuesta_12" value="A menudo"> A menudo</label>
+                <label for="respuesta_12"><input type="radio" id="respuesta_12_d" formControlName="respuesta_12" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">13.¿Experimentas síntomas físicos de ansiedad, como sudoración, palpitaciones o temblores?</p>
+            <div class="options">
+                <label for="respuesta_13"><input type="radio" id="respuesta_13_a" formControlName="respuesta_13" value="Nunca"> Nunca</label>
+                <label for="respuesta_13"><input type="radio" id="respuesta_13_b" formControlName="respuesta_13" value="A veces"> A veces</label>
+                <label for="respuesta_13"><input type="radio" id="respuesta_13_c" formControlName="respuesta_13" value="A menudo"> A menudo</label>
+                <label for="respuesta_13"><input type="radio" id="respuesta_13_d" formControlName="respuesta_13" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">14.¿Te sientes abrumado/a por las responsabilidades y tareas académicas?</p>
+            <div class="options">
+                <label for="respuesta_14"><input type="radio" id="respuesta_14_a" formControlName="respuesta_14" value="Nunca"> Nunca</label>
+                <label for="respuesta_14"><input type="radio" id="respuesta_14_b" formControlName="respuesta_14" value="A veces"> A veces</label>
+                <label for="respuesta_14"><input type="radio" id="respuesta_14_c" formControlName="respuesta_14" value="A menudo"> A menudo</label>
+                <label for="respuesta_14"><input type="radio" id="respuesta_14_d" formControlName="respuesta_14" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">15.¿Te preocupa tu futuro profesional y sientes que no estás haciendo lo suficiente para prepararte?</p>
+            <div class="options">
+                <label for="respuesta_15"><input type="radio" id="respuesta_15_a" formControlName="respuesta_15" value="Nunca"> Nunca</label>
+                <label for="respuesta_15"><input type="radio" id="respuesta_15_b" formControlName="respuesta_15" value="A veces"> A veces</label>
+                <label for="respuesta_15"><input type="radio" id="respuesta_15_c" formControlName="respuesta_15" value="A menudo"> A menudo</label>
+                <label for="respuesta_15"><input type="radio" id="respuesta_15_d" formControlName="respuesta_15" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">16.¿Te sientes ansioso/a antes de exámenes o presentaciones importantes?</p>
+            <div class="options">
+                <label for="respuesta_16"><input type="radio" id="respuesta_16_a" formControlName="respuesta_16" value="Nunca"> Nunca</label>
+                <label for="respuesta_16"><input type="radio" id="respuesta_16_b" formControlName="respuesta_16" value="A veces"> A veces</label>
+                <label for="respuesta_16"><input type="radio" id="respuesta_16_c" formControlName="respuesta_16" value="A menudo"> A menudo</label>
+                <label for="respuesta_16"><input type="radio" id="respuesta_16_d" formControlName="respuesta_16" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">17.¿Te preocupa excesivamente tu salud o la de tus seres queridos?</p>
+            <div class="options">
+                <label for="respuesta_17"><input type="radio" id="respuesta_17_a" formControlName="respuesta_17" value="Nunca"> Nunca</label>
+                <label for="respuesta_17"><input type="radio" id="respuesta_17_b" formControlName="respuesta_17" value="A veces"> A veces</label>
+                <label for="respuesta_17"><input type="radio" id="respuesta_17_c" formControlName="respuesta_17" value="A menudo"> A menudo</label>
+                <label for="respuesta_17"><input type="radio" id="respuesta_17_d" formControlName="respuesta_17" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">18.¿Te sientes inseguro/a o con baja autoestima debido a la comparación con otros estudiantes?</p>
+            <div class="options">
+                <label for="respuesta_18"><input type="radio" id="respuesta_18_a" formControlName="respuesta_18" value="Nunca"> Nunca</label>
+                <label for="respuesta_18"><input type="radio" id="respuesta_18_b" formControlName="respuesta_18" value="A veces"> A veces</label>
+                <label for="respuesta_18"><input type="radio" id="respuesta_18_c" formControlName="respuesta_18" value="A menudo"> A menudo</label>
+                <label for="respuesta_18"><input type="radio" id="respuesta_18_d" formControlName="respuesta_18" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">19.¿Te cuesta disfrutar de tiempo libre porque sientes que deberías estar estudiando o trabajando?</p>
+            <div class="options">
+                <label for="respuesta_19"><input type="radio" id="respuesta_19_a" formControlName="respuesta_19" value="Nunca"> Nunca</label>
+                <label for="respuesta_19"><input type="radio" id="respuesta_19_b" formControlName="respuesta_19" value="A veces"> A veces</label>
+                <label for="respuesta_19"><input type="radio" id="respuesta_19_c" formControlName="respuesta_19" value="A menudo"> A menudo</label>
+                <label for="respuesta_19"><input type="radio" id="respuesta_19_d" formControlName="respuesta_19" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <p class="question-text">20.¿Experimentas episodios de pánico o ataques de ansiedad en situaciones de alta presión académica?</p>
+            <div class="options">
+                <label for="respuesta_20"><input type="radio" id="respuesta_20_a" formControlName="respuesta_20" value="Nunca"> Nunca</label>
+                <label for="respuesta_20"><input type="radio" id="respuesta_20_b" formControlName="respuesta_20" value="A veces"> A veces</label>
+                <label for="respuesta_20"><input type="radio" id="respuesta_20_c" formControlName="respuesta_20" value="A menudo"> A menudo</label>
+                <label for="respuesta_20"><input type="radio" id="respuesta_20_d" formControlName="respuesta_20" value="Siempre"> Siempre</label>
+            </div>
+        </div>
+
+        <button type="submit">Consultar Diagnostico</button>
+    </form>
+</div>

@@ -1,0 +1,86 @@
+import { Component, Inject, LOCALE_ID, OnInit } from '@angular/core';
+import { ReactiveFormsModule,FormControl, FormGroup, Validators } from '@angular/forms';
+import { Test1Service } from '../service/test1.service';
+import { CommonModule } from '@angular/common';
+import Swal from 'sweetalert2';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Router } from '@angular/router';
+import { FormBuilder } from '@angular/forms';
+import { test1 } from '../model/test1';
+
+@Component({
+  selector: 'app-test1',
+  standalone: true,
+  templateUrl: './test1.component.html',
+  styleUrls: ['./test1.component.css'],
+  imports: [ReactiveFormsModule, CommonModule, NgxPaginationModule],
+})
+export class Test1Component implements OnInit {
+  respuestaForm: FormGroup;
+
+  constructor(
+    @Inject(LOCALE_ID) public locale: string,
+    private test1Service: Test1Service,
+    private router: Router
+  ) {
+    this.respuestaForm = new FormGroup({
+      respuesta_1: new FormControl('', [Validators.required]),
+      respuesta_2: new FormControl('', [Validators.required]),
+      respuesta_3: new FormControl('', [Validators.required]),
+      respuesta_4: new FormControl('', [Validators.required]),
+      respuesta_5: new FormControl('', [Validators.required]),
+      respuesta_6: new FormControl('', [Validators.required]),
+      respuesta_7: new FormControl('', [Validators.required]),
+    });
+  }
+
+  ngOnInit(): void {
+    // No es necesario hacer nada aquí ya que el servicio maneja el ID del usuario
+  }
+
+  registrarRespuestas(): void {
+    if (this.respuestaForm.invalid) {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Advertencia...',
+        text: 'Por favor complete todas las respuestas antes de enviar.',
+      });
+      return;
+    }
+
+    const respuestas = {
+      respuestas: [
+        this.respuestaForm.get('respuesta_1')?.value,
+        this.respuestaForm.get('respuesta_2')?.value,
+        this.respuestaForm.get('respuesta_3')?.value,
+        this.respuestaForm.get('respuesta_4')?.value,
+        this.respuestaForm.get('respuesta_5')?.value,
+        this.respuestaForm.get('respuesta_6')?.value,
+        this.respuestaForm.get('respuesta_7')?.value,
+      ]
+    };
+
+    this.test1Service.registrarRespuestas(respuestas)
+      .subscribe({
+        next: (response: any) => {
+          console.log('Respuestas registradas:', response);
+          Swal.fire({
+            icon: 'success',
+            title: 'Registro exitoso',
+            text: 'Se registraron exitosamente las respuestas!',
+          });
+          this.respuestaForm.reset();
+          this.test1Service.guardarRespuestas(respuestas);
+          this.router.navigate(['/diagnostico']); // Redirigir a la página principal
+        },
+        error: (error) => {
+          console.error('Error al registrar respuestas:', error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Advertencia...',
+            text: 'Ha ocurrido un error al registrar respuestas!',
+          });
+        }
+      });
+  }
+}

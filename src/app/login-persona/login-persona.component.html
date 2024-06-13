@@ -1,0 +1,17 @@
+<div class="center-container">
+    <div class="login-container">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="loginPersona()">
+            <div>
+                <label for="correo">Correo:</label>
+                <input id="correo" formControlName="correo" type="email" />
+            </div>
+            <div>
+                <label for="clave">Clave:</label>
+                <input id="clave" formControlName="clave" type="password" />
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p class="register-link">¿No tienes una cuenta? <a href="/registrar-persona">Regístrate aquí</a></p>
+    </div>
+</div>

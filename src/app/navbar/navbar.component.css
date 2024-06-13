@@ -1,0 +1,19 @@
+.offcanvas-body.bg-white {
+    background-color: #fff;
+}
+
+.offcanvas-title {
+    color: #fff;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:visited {
+    color: white;
+}

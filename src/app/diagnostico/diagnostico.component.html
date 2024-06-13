@@ -1,0 +1,58 @@
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/principal">SISVITA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Offcanvas Content -->
+<div class="offcanvas offcanvas-end text-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+    <div class="offcanvas-header bg-dark">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MENU</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body bg-dark">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/principal">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cuenta
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="#">Ver Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="/login-persona">Cerrar Sesion</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div *ngIf="respuestas" class="test-respuestas">
+        <h2>Respuestas del test</h2>
+        <ul>
+            <li><strong>1. Sentirse nervioso, ansioso o al límite:</strong> {{ respuestas.respuestas[0] }}</li>
+            <li><strong>2. No poder detener o controlar la preocupación:</strong> {{ respuestas.respuestas[1] }}</li>
+            <li><strong>3. Preocuparse demasiado por cosas diferentes:</strong> {{ respuestas.respuestas[2] }}</li>
+            <li><strong>4. Problemas para relajarse:</strong> {{ respuestas.respuestas[3] }}</li>
+            <li><strong>5. Estar tan inquieto que cuesta quedarse quieto:</strong> {{ respuestas.respuestas[4] }}</li>
+            <li><strong>6. Molestarse o irritarse fácilmente:</strong> {{ respuestas.respuestas[5] }}</li>
+            <li><strong>7. Sentir miedo, como si pudiera pasar algo terrible:</strong> {{ respuestas.respuestas[6] }}</li>
+        </ul>
+        <h2>Suma de puntajes:</h2>
+        <p>{{ sumaRespuestas }}</p>
+        <h2>Situación según el resultado:</h2>
+        <p class="resultado">{{ resultado }}</p>
+    </div>
+</div>
