@@ -1,81 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&family=Marko+One&family=Playwrite+AU+VIC:wght@100..400&family=Playwrite+ES:wght@100..400&display=swap");
 * {
-  font-family: "Marko One", serif;
-  margin: 0;
-  padding: 0;
+font-family: "Marko One", serif;
+margin: 0;
+padding: 0;
 }
 
 .Todo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 100vh;
-}
-.Imagen-sisvitaimg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 27%;
-background: url(img-login/sisvitaimg.jpg);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 100vh;
+width: 100%;
+background:url(img-login/rosayceleste1.jpg) no-repeat;
 }
 
+
 .login-container {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 400px;
-  width: 100%;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+padding: 20px;
+max-width: 400px;
+width: 100%;
 }
 
 .login-container h2 {
-  margin-bottom: 20px;
-  text-align: center;
+margin-bottom: 20px;
+text-align: center;
 }
 
 .login-container form div {
-  margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 .login-container form div label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.login-container form div input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
 }
 
 .login-container form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #73ced1;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    width: 100%;
+    padding: 10px;
+    background-color: #73ced1;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }    
+
+.login-container form div input {
+width: 100%;
+padding: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
 }
 
 .login-container form button:hover {
-  background-color: #417475;
-}
-
-.register-link {
-  text-align: center;
-  margin-top: 20px;
+background-color: #417475;
 }
 
 .register-link a {
-  color: #d90004;
-  text-decoration: none;
+color: #d90004;
+text-decoration: none;
 }
 
 .register-link a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
+    }
+
+.register-link {
+text-align: center;
+margin-top: 20px;
 }
+
+
