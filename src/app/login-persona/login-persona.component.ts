@@ -30,7 +30,7 @@ export class LoginPersonaComponent {
 
   loginPersona() {
     if (this.loginForm.valid) {
-      this.http.post<any>('http://localhost:5000/usuario/v1/login-persona', this.loginForm.value)
+      this.http.post<any>('http://127.0.0.1:5000/usuario/v1/login', this.loginForm.value)
         .subscribe(
           (response: any) => {
             Swal.fire({
@@ -38,9 +38,15 @@ export class LoginPersonaComponent {
               title: 'Login exitoso',
               text: 'Has iniciado sesión correctamente!',
             });
-            localStorage.setItem('id_usuario', response.data.id_usuario);
-            console.log('ID de usuario guardado en localStorage:', response.data.id_usuario);
-            this.router.navigate(['/principal']); // Redirigir a la página principal
+            // Guardar el token en localStorage (aquí asumo que el token está en response.data.access_token)
+            localStorage.setItem('access_token', response.data.access_token);
+            console.log('Token JWT guardado en localStorage:', response.data.access_token);
+
+            // Opcional: Guardar otros datos del usuario en localStorage si son necesarios
+            localStorage.setItem('id_usuario', response.data.usuario.id_usuario);
+
+            // Redirigir a la página principal
+            this.router.navigate(['/principal']);
           },
           (error: any) => {
             Swal.fire({
@@ -53,4 +59,3 @@ export class LoginPersonaComponent {
     }
   }
 }
-
