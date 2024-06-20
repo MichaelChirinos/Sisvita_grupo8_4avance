@@ -30,7 +30,7 @@ export class LoginPersonaComponent {
 
   loginPersona() {
     if (this.loginForm.valid) {
-      this.http.post<any>('http://127.0.0.1:5000/usuario/v1/login', this.loginForm.value)
+      this.http.post<any>('http://127.0.0.1:5000/usuario/v1/login/paciente', this.loginForm.value)
         .subscribe(
           (response: any) => {
             Swal.fire({
@@ -46,7 +46,7 @@ export class LoginPersonaComponent {
             localStorage.setItem('id_usuario', response.data.usuario.id_usuario);
 
             // Redirigir a la página principal
-            this.router.navigate(['/principal']);
+            this.router.navigate(['/principal-paciente']);
           },
           (error: any) => {
             Swal.fire({
