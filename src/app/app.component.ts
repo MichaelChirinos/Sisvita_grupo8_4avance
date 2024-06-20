@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RegistrarPersonaComponent } from './registrar-persona/registrar-persona.component';
+import { InicioHomeComponent } from './inicio-home/inicio-home.component';
 import { LoginPersonaComponent } from './login-persona/login-persona.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { Test1Component } from './test1/test1.component';

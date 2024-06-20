@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { InicioHomeComponent } from './inicio-home/inicio-home.component';
 import { LoginPersonaComponent } from './login-persona/login-persona.component';
 import { RegistrarPersonaComponent } from './registrar-persona/registrar-persona.component';
 import { PrincipalComponent } from './principal/principal.component';
@@ -8,7 +9,9 @@ import { Test2Component } from './test2/test2.component';
 import { Diagnostico2Component } from './diagnostico2/diagnostico2.component';
 
 export const routes: Routes = [
-    {path:'', redirectTo: '/login-persona',pathMatch:'full'},
+
+    {path:'', redirectTo: '/inicio-home',pathMatch:'full'},
+    {path: 'inicio-home', component: InicioHomeComponent},
     {path:'login-persona', component: LoginPersonaComponent},
     {path:'registrar-persona', component:RegistrarPersonaComponent},
     {path:'principal', component : PrincipalComponent},

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer:ital@0;1&family=Marko+One&family=Playwrite+AU+VIC:wght@100..400&family=Playwrite+ES:wght@100..400&display=swap");
+* {
+font-family: "Marko One", serif;
+margin: 0;
+padding: 0;
+}
+
+.Todo { /*fondo*/
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 100vh;
+width: 100%;
+background-color: #9FD2DC;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23ca69c9' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%23915dba' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23a48fed' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23868ad1' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%236ba9f2' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23438ce0' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%232ab1e9' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%2349a2dc' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2348c9ed' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%231faddb' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%236accd2' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%2351b8cd' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+}
+
+
+/* para los test
+background-color: #9FD2DC;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 90 90'%3E%3Ccircle fill-opacity='0.25' fill='%236F93DC' cx='45' cy='45' r='12'/%3E%3Cg fill='%238B4FA1' fill-opacity='0.25'%3E%3Ccircle cx='0' cy='90' r='8'/%3E%3Ccircle cx='90' cy='90' r='8'/%3E%3Ccircle cx='90' cy='0' r='8'/%3E%3Ccircle cx='0' cy='0' r='8'/%3E%3C/g%3E%3C/svg%3E");
+*/
