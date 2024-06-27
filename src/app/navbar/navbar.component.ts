@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { PersonaService } from '../service/Persona.service';
+import { PacienteService } from '../service/paciente.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,6 +11,6 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-  constructor(private PersonaService: PersonaService, private router: Router) {}
+  constructor(private PacienteService: PacienteService, private router: Router) {}
 
 }

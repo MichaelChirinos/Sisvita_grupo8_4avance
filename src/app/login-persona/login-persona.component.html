@@ -1,9 +1,7 @@
-<script
-  src="https://kit.fontawesome.com/fd82a06844.js"
-  crossorigin="anonymous"
-></script>
+<script src="https://kit.fontawesome.com/fd82a06844.js" crossorigin="anonymous"></script>
 
 <div class="Todo">
+<<<<<<< HEAD
   <div class="Imagen-sisvitaimg">
     <img
       src="../../assets/imglogin-persona/sisvitaimg.jpg"
@@ -29,6 +27,34 @@
         ¿No tienes una cuenta?
         <a href="/registrar-persona">Regístrate aquí</a>
       </p>
+=======
+    <div class="Imagen-sisvitaimg">
+        <p>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br />
+        </p>
+>>>>>>> 12b7964379b545fca4f1b82078886390d4e372f3
     </div>
-  </div>
+    <div class="center-container">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form [formGroup]="loginForm" (ngSubmit)="loginPersona()">
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input id="correo" formControlName="correo" type="email" />
+                    <label for="correo">Correo:</label>
+                </div>
+                <div>
+                    <i class="fa-solid fa-lock"></i>
+                    <input id="clave" formControlName="clave" type="password" />
+                    <label for="clave">Contraseña: </label>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p class="register-link">
+                ¿No tienes una cuenta?
+                <a href="/registrar-paciente">Regístrate aquí</a>
+            </p>
+        </div>
+    </div>
 </div>

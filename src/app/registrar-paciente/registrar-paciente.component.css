@@ -1,0 +1,50 @@
+/* Estilos personalizados para el formulario */
+
+.card {
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    margin-top: 20px;
+}
+
+
+/* Personalización de los select */
+
+select.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 8px 32px 8px 8px;
+    border: 1px solid #ced4da;
+    background: url('data:image/svg+xml,\
+    <svg viewBox="0 0 12 12" fill="%23333" xmlns="http://www.w3.org/2000/svg"><path d="M6 9L1 4h10z"/></svg>') no-repeat right 10px center/12px 12px;
+    background-color: #fff;
+}
+
+.box .button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.box .button:hover {
+    background-color: #0056b3;
+}

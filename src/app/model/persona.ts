@@ -1,11 +1,10 @@
 export interface Persona {
-  id_usuario: number;
+  id_persona?: number;
+  tipo_documento: string;
+  documento: string;
   nombre: string;
-  apellido: string;
-  dni : number;
-  telefono : number;
+  apellido_paterno : string;
+  apellido_materno : string;
+  telefono : string;
   fecha_nacimiento: Date;
-  sexo: string;
-  correo : string;
-  clave: string;
 }

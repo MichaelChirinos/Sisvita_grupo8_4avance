@@ -1,0 +1,95 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/assets/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" /> SISVITA
+        </a>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>Registrar Paciente</h2>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="especialistaForm" (ngSubmit)="registrarEspecialista()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="tipo_documento">Tipo de Documento</label>
+                            <select id="tipo_documento" formControlName="tipo_documento" class="form-control">
+                                <option value="DNI">DNI</option>
+                                <option value="Carnet Extranjería">Carnet de Extranjería</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="documento">Documento</label>
+                            <input id="documento" formControlName="documento" class="form-control" placeholder="Ingrese número de documento" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input id="nombre" formControlName="nombre" class="form-control" placeholder="Ingrese nombre" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="apellido_paterno">Apellido Paterno</label>
+                            <input id="apellido_paterno" formControlName="apellido_paterno" class="form-control" placeholder="Ingrese apellido paterno" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="apellido_materno">Apellido Materno</label>
+                            <input id="apellido_materno" formControlName="apellido_materno" class="form-control" placeholder="Ingrese apellido materno" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input id="telefono" formControlName="telefono" class="form-control" placeholder="Ingrese teléfono" required />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="fecha_nacimiento">Fecha de Nacimiento</label>
+                            <input type="date" id="fecha_nacimiento" formControlName="fecha_nacimiento" class="form-control" required />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="colegiatura">Colegiatura</label>
+                            <input id="colegiatura" formControlName="colegiatura" class="form-control" placeholder="Ingrese número de colegiatura" required />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" formControlName="correo" class="form-control" placeholder="Ingrese correo electrónico" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="clave">Clave</label>
+                    <input type="password" id="clave" formControlName="clave" class="form-control" placeholder="Ingrese clave" required />
+                </div>
+
+                <button type="submit" class="btn btn-primary">Registrar Especialista</button>
+                <div class="box">
+                    <a href="/login-persona" class="button">Retroceder</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
