@@ -7,27 +7,11 @@ import { Alternativa } from '../model/alternativa';
   providedIn: 'root'
 })
 export class AlternativaService {
-  private baseUrl = 'http://localhost:5000'; // Cambia la URL base según tu configuración
+  private apiUrl = 'http://localhost:5000/alternativa/v1';
 
   constructor(private http: HttpClient) { }
 
-  obtenerMensajePrueba(): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/alternativa/v1`);
-  }
-
-  agregarAlternativa(alternativa: Alternativa): Observable<any> {
-    return this.http.post<any>(`${this.baseUrl}/alternativa/v1/agregar`, alternativa);
-  }
-
-  listarAlternativas(idTipoTest: number): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/alternativa/v1/listar/${idTipoTest}`);
-  }
-
-  actualizarAlternativa(id: number, alternativa: Alternativa): Observable<any> {
-    return this.http.put<any>(`${this.baseUrl}/alternativa/v1/actualizar/${id}`, alternativa);
-  }
-
-  eliminarAlternativa(id: number): Observable<any> {
-    return this.http.delete<any>(`${this.baseUrl}/alternativa/v1/eliminar/${id}`);
+  listarAlternativas(id_tipo_test: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/listar/${id_tipo_test}`);
   }
 }

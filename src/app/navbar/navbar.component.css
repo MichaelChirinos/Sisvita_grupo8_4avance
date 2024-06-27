@@ -1,19 +1,8 @@
-.offcanvas-body.bg-white {
-    background-color: #fff;
+body {
+    padding-top: 56px;
+    /* Ajusta este valor si el navbar tiene una altura diferente */
 }
 
 .offcanvas-title {
-    color: #fff;
-}
-
-.navbar-nav .nav-link {
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link:visited {
     color: white;
 }

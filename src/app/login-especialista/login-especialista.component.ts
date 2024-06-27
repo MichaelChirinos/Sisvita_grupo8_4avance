@@ -46,7 +46,8 @@ export class LoginEspecialistaComponent {
             localStorage.setItem('id_usuario', response.data.usuario.id_usuario);
 
             // Redirigir a la página principal
-            this.router.navigate(['/principal-especialista']);
+            this.router.navigate(['/principal-especialista']).then(() => {
+            });
           },
           (error: any) => {
             Swal.fire({

@@ -35,4 +35,7 @@ export class PacienteService {
   loginEspecialista(correo: string, clave: string): Observable<any> {
     return this.http.post(`${this.apiUrl}/login/especialista`, { correo, clave });
   }
+  getPaciente(id_paciente: number): Observable<any> {
+    return this.http.get(`${this.apiUrl}/paciente/v1/${id_paciente}`);
+  }
 }

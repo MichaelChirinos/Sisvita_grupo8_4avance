@@ -1,0 +1,37 @@
+<div class="container">
+    <header>
+        <h1>Bienvenidos a Nuestro Portal de Tests</h1>
+    </header>
+
+    <section class="about-us">
+        <div class="card">
+            <div class="card-body">
+                <h2>Visión</h2>
+                <p>Nuestra visión es proporcionar herramientas de evaluación precisas y accesibles para todos.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h2>Misión</h2>
+                <p>Nuestra misión es ayudar a las personas a comprender mejor su bienestar mental a través de tests confiables y fáciles de usar.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h2>Acerca de Nosotros</h2>
+                <p>Somos un equipo dedicado a la creación de herramientas que promuevan la salud mental y el bienestar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="test-list">
+        <h2>Lista de Tests</h2>
+        <div class="card" *ngFor="let test of tiposTest">
+            <div class="card-body">
+                <h5 class="card-title">{{ test.nombre }}</h5>
+                <p class="card-text">{{ test.descripcion }}</p>
+                <a [routerLink]="['/detalle-tipo-test', test.id_tipo_test]" class="btn btn-primary">Realizar Test</a>
+            </div>
+        </div>
+    </section>
+</div>

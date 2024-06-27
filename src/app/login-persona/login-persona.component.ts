@@ -46,7 +46,9 @@ export class LoginPersonaComponent {
             localStorage.setItem('id_usuario', response.data.usuario.id_usuario);
 
             // Redirigir a la página principal
-            this.router.navigate(['/principal-paciente']);
+            this.router.navigate(['/listar-tipo-test']).then(() => {
+              window.location.reload();
+            });
           },
           (error: any) => {
             Swal.fire({

@@ -1,0 +1,11 @@
+<!-- src/app/ver-datos/ver-datos.component.html -->
+<div *ngIf="paciente">
+    <h2>Datos del Paciente</h2>
+    <p><strong>ID Paciente:</strong> {{ paciente.id_paciente }}</p>
+    <p><strong>ID Persona:</strong> {{ paciente.id_persona }}</p>
+    <p><strong>Fecha de Registro:</strong> {{ paciente.fecha_registro }}</p>
+    <h3>Datos de la Persona</h3>
+    <p><strong>Nombre:</strong> {{ paciente.persona.nombre }}</p>
+    <p><strong>Apellido:</strong> {{ paciente.persona.apellido }}</p>
+    <!-- Agrega otros campos de Persona aquí -->
+</div>
