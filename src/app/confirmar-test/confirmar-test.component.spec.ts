@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ConfirmarTestComponent } from './confirmar-test.component';
 
 describe('ConfirmarTestComponent', () => {
@@ -11,7 +10,6 @@ describe('ConfirmarTestComponent', () => {
       imports: [ConfirmarTestComponent]
     })
     .compileComponents();
-    
     fixture = TestBed.createComponent(ConfirmarTestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

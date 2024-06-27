@@ -11,7 +11,6 @@ describe('VigilanciaComponent', () => {
       imports: [VigilanciaComponent]
     })
     .compileComponents();
-    
     fixture = TestBed.createComponent(VigilanciaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

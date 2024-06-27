@@ -21,14 +21,17 @@ export class VigilanciaComponent implements OnInit {
   filtroTipoTest: string = '';
   tiposTest: any[] = []; // Lista de todos los tipos de test disponibles
 
+
   constructor(private testService: TestService, private router: Router, private tipoTestService: TipoTestService) { }
+
 
   ngOnInit(): void {
     if (this.isBrowser()) {
       this.cargarTodosLosTests();
-      this.listarTiposTest(); 
+      this.listarTiposTest();
     }
   }
+
 
   isBrowser(): boolean {
     return typeof window !== 'undefined' && typeof localStorage !== 'undefined';

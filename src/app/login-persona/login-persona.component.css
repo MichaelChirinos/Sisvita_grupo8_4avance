@@ -3,28 +3,32 @@
   font-family: "Marko One", serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 .Todo {
+  width: 100%;
+  padding: 10%;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  min-height: 100vh;
+  position: relative;
 }
 .Imagen-sisvitaimg {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 27%;
-  background: url(img-login/sisvitaimg1.jpg);
+  max-width: 400px;
+  width: 100%;
 }
 
 .login-container {
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.5);
+  padding: 10px;
   max-width: 400px;
   width: 100%;
 }
@@ -54,7 +58,7 @@
 .login-container form button {
   width: 100%;
   padding: 10px;
-  background-color: #e473b1;
+  background-color: #73ced1;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -63,7 +67,7 @@
 }
 
 .login-container form button:hover {
-  background-color: #7a3e5f;
+  background-color: #417475;
 }
 
 .register-link {
@@ -78,4 +82,8 @@
 
 .register-link a:hover {
   text-decoration: underline;
+}
+
+.imagen1 {
+  border-radius: 8px;
 }

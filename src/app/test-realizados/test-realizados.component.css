@@ -1,0 +1,47 @@
+.card {
+    background-color: #ffffff;
+    /* Color de fondo */
+    border: 1px solid #e0e0e0;
+    /* Borde */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+    margin-bottom: 20px;
+    /* Espacio inferior entre cards */
+}
+
+
+.card-title {
+    color: #007bff;
+    /* Color del título */
+    font-size: 1.2rem;
+    /* Tamaño del texto del título */
+    margin-bottom: 10px;
+    /* Espacio inferior del título */
+}
+
+
+.card-text {
+    color: #6c757d;
+    /* Color del texto del cuerpo */
+    font-size: 1rem;
+    /* Tamaño del texto del cuerpo */
+}
+
+
+.footer {
+    background-color: #f8f9fa;
+    /* Color de fondo del pie de página */
+    padding: 20px 0;
+    /* Espaciado interno del pie de página */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.footer .box {
+    margin-bottom: 0;
+    /* Elimina el margen inferior del contenedor del botón */
+}

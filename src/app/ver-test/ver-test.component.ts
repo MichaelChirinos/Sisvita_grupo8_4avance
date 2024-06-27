@@ -50,7 +50,7 @@ export class VerTestComponent {
     this.obtenerTratamientos()
     }
   }
-  
+ 
   isBrowser(): boolean {
     return typeof window !== 'undefined' && typeof localStorage !== 'undefined';
   }
@@ -75,7 +75,7 @@ export class VerTestComponent {
       console.error('Error al cargar los tests:', error);
     });
   }
-  
+ 
   obtenerTratamientos() {
     this.http.get<any>('http://localhost:5000/tratamiento/v1/listar').subscribe(response => {
       this.tratamientos = response.data;
@@ -85,6 +85,3 @@ export class VerTestComponent {
     });
   }
 }
-
-
-

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { VerTestComponent } from './ver-test.component';
+
 
 describe('VerTestComponent', () => {
   let component: VerTestComponent;
@@ -12,6 +12,9 @@ describe('VerTestComponent', () => {
     })
     .compileComponents();
     
+    fixture = TestBed.createComponent(VerTestComponent);
+
+
     fixture = TestBed.createComponent(VerTestComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
