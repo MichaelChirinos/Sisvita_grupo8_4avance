@@ -1,0 +1,72 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2>Confirmar Test</h2>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col">
+            <h4>{{ test.nombre_tipo_test }}</h4>
+            <p>
+                <strong>Id_test:</strong> {{ test.id_test }}<br>
+                <strong>Nombre Paciente:</strong> {{ test.nombre_paciente }}<br>
+                <strong>Fecha:</strong> {{ test.fecha_realizacion | date }}<br>
+                <strong>Resultado:</strong> {{ test.suma_respuestas }}<br>
+                <strong>Descripción:</strong> {{ test.descripcion }}<br>
+            </p>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col">
+            <label for="tratamiento">Tratamiento:</label>
+            <select id="tratamiento" [(ngModel)]="test.id_tratamiento" class="form-control">
+                <option *ngFor="let tratamiento of tratamientos" [value]="tratamiento.id_tratamiento">
+                    {{ tratamiento.descripcion }}
+                </option>
+            </select>
+            <button class="btn btn-primary mt-2" (click)="asignarTratamiento(test.id_tratamiento!)">Asignar Tratamiento</button>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col">
+            <label for="medida">Medida:</label>
+            <select id="medida" [(ngModel)]="test.id_medida" class="form-control">
+                <option *ngFor="let medida of medidas" [value]="medida.id_medida">
+                    {{ medida.descripcion }}
+                </option>
+            </select>
+            <button class="btn btn-primary mt-2" (click)="asignarMedida(test.id_medida!)">Asignar Medida</button>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col">
+            <label for="observacion">Observación:</label>
+            <textarea id="observacion" [(ngModel)]="test.observacion" rows="3" class="form-control"></textarea>
+            <button class="btn btn-secondary mt-2" (click)="agregarObservacion(test.observacion!)">Agregar Observación</button>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col">
+            <label for="confirmar">Confirmar:</label>
+            <input type="checkbox" id="confirmar" [(ngModel)]="test.confirmar" (change)="ConfirmarTest()">
+        </div>
+    </div>
+
+
+    <div class="row mt-4">
+        <div class="col text-center">
+            <button class="btn btn-danger" onclick="window.location.href='/vigilancia'">Retroceder</button>
+        </div>
+    </div>
+</div>
+

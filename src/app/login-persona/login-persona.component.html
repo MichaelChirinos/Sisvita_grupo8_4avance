@@ -5,22 +5,21 @@
 
 <div class="Todo">
   <div class="Imagen-sisvitaimg">
-    <p>
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <br /><br /><br />
-    </p>
+    <img
+      src="../../assets/imglogin-persona/sisvitaimg.jpg"
+      alt="Cerebro"
+      class="imagen1"
+    />
   </div>
   <div class="center-container">
     <div class="login-container">
       <h2>Login</h2>
       <form [formGroup]="loginForm" (ngSubmit)="loginPersona()">
         <div>
-          <i class="fa-solid fa-envelope"></i>
           <input id="correo" formControlName="correo" type="email" />
           <label for="correo">Correo:</label>
         </div>
         <div>
-          <i class="fa-solid fa-lock"></i>
           <input id="clave" formControlName="clave" type="password" />
           <label for="clave">Contraseña: </label>
         </div>
