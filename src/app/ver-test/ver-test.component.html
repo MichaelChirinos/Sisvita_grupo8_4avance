@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col text-center">
+            <h2>Confirmar Test</h2>
+        </div>
+    </div>
+
+
+    <div class="row mt-3">
+        <div class="col">
+            <h4>{{ test.nombre_tipo_test }}</h4>
+            <p>
+                <strong>Id_test:</strong> {{ test.id_test }}<br>
+                <strong>Nombre Paciente:</strong> {{ test.nombre_paciente }}<br>
+                <strong>Fecha:</strong> {{ test.fecha_realizacion | date }}<br>
+                <strong>Resultado:</strong> {{ test.suma_respuestas }}<br>
+                <strong>Descripción:</strong> {{ test.descripcion }}<br>
+                <strong>Medida Especialista:</strong> {{ test.medida }}<br>
+                <strong>Tratamiento:</strong> {{ test.tratamiento }}<br>
+                <strong>Observacion:</strong> {{ test.observacion }}<br>
+                <strong>Estado:</strong> {{ test.confirmar }}<br>
+            </p>
+        </div>
+    </div>
+</div>

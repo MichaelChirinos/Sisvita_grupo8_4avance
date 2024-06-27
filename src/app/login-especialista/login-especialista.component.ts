@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import { Component } from "@angular/core";
-@Component({
-  selector: "app-login-especialista",
-  standalone: true,
-  imports: [],
-  templateUrl: "./login-especialista.component.html",
-  styleUrl: "./login-especialista.component.css",
-})
-export class LoginEspecialistaComponent {}
-=======
 import { Component } from '@angular/core';
 import { ReactiveFormsModule,FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -70,4 +59,3 @@ export class LoginEspecialistaComponent {
     }
   }
 }
->>>>>>> 12b7964379b545fca4f1b82078886390d4e372f3
